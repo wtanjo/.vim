@@ -6,7 +6,7 @@ nnoremap <leader>c :
 # <C-o> for un-jump, and <C-i> for re-jump
 # Builtin: <C-[> == <ESC>
 # CAUTION: <C-c> is INTERUPTION signal, and has some undesired side effect.
-# e.g. The LSP W&As won't be rendered with <C-c> to exit insert mode.
+# e.g. The LSP diagnoses won't be rendered with <C-c> to exit insert mode.
 inoremap <A-h> <Left>
 inoremap <A-j> <Down>
 inoremap <A-k> <Up>
@@ -40,3 +40,6 @@ nnoremap <leader>wk <C-k>k
 nnoremap <leader>wl <C-w>l
 
 nnoremap <leader>t :terminal<CR>
+
+# Netrw can be used to check the detailed infomations about the files.
+nnoremap <leader>n :Ex<CR>

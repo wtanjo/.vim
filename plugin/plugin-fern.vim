@@ -3,9 +3,9 @@ vim9script
 # g:fern#renderer = "nerdfont"
 g:fern#default_hidden = 1
 def InitFern()
-  setlocal norelativenumber         # 关闭相对行号
-  setlocal nonumber                 # 关闭绝对行号
-  setlocal signcolumn=no            # 关闭侧边符号栏
+  setlocal norelativenumber
+  setlocal nonumber
+  setlocal signcolumn=no
 
   nnoremap <buffer> <CR> <Plug>(fern-action-open-or-enter)
   # Minus symbol '-' is use as fern-action-mark, which is useful for batch renaming.
@@ -13,7 +13,7 @@ def InitFern()
   nnoremap <buffer> % <Plug>(fern-action-new-path)
   nnoremap <buffer> n <Plug>(fern-action-new-path)
   nnoremap <buffer> D <Plug>(fern-action-remove)
-  nnoremap <buffer> R <Plug>(fern-action-move)
+  nnoremap <buffer> R <Plug>(fern-action-rename)
   nnoremap <buffer> r <Plug>(fern-action-reload)
 enddef
 
