@@ -28,7 +28,8 @@ g:lightline = {
   }
 }
 g:lightline#bufferline#clickable = 1
-g:lightline#bufferline#show_number = 2
+g:lightline#bufferline#show_number = 0
 nnoremap <leader>bq :bdelete<CR>
 nnoremap <leader>bh :bprevious<CR>
 nnoremap <leader>bl :bnext<CR>
+nnoremap <leader>bj :ls<CR>:b<Space>

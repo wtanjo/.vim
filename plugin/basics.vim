@@ -1,6 +1,9 @@
 vim9script
 
 set nocompatible
+# set hidden allows buffers to exist in a hidden state,
+# literally, to be switched when not saved.
+set hidden
 set encoding=utf-8
 set belloff=all
 set number
