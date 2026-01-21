@@ -16,6 +16,10 @@ set shiftwidth=4
 set expandtab
 set smartindent
 
+filetype on
+filetype plugin on
+filetype indent on
+
 set cursorline
 set whichwrap+=h,l,<,>,[,]
 set showmatch

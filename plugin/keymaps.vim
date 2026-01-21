@@ -10,11 +10,16 @@ nnoremap <leader>c :
 # t: Terminal mode
 tnoremap <ESC> <C-\><C-n>
 tnoremap <C-[> <C-\><C-n>
-# Vim will wait with the Alt prefix, but not with the Ctrl prefix.
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+# Let's keep some original signals:
+# <C-h> == <BS>
+# <C-j> == <CR>
+# Historically, <C-k> == Vertical Tab(~= <UP>).
+# In Vim, <C-k> triggers diagraphs(二合字: <C-k>[char][char] --> specail char).
+# Historically, <C-l> == Form Feed(~= <Right>).
+# In Vim, <C-l> redraws the screen.
+# But let's add something to it.
+nnoremap <C-l> :nohlsearch<CR><C-l>
+inoremap <C-u> <C-g>u<C-u>
 nnoremap + $
 nnoremap - ^
 xnoremap + $
@@ -25,19 +30,10 @@ xnoremap - ^
 # '[letter]: call(jump to) the line of the mark
 # `[letter]: call(jump to) the position(line and column) of the mark
 nnoremap <A-up> :m -2<CR>==
+nnoremap <A-k> :m -2<CR>==
 nnoremap <A-down> :m +1<CR>==
+nnoremap <A-j> :m +1<CR>==
 nnoremap <A-z> :set wrap!<CR>
-
-import '../import/functions.vim' as fn
-inoremap <expr> ( fn.SmartPair('(')
-inoremap <expr> [ fn.SmartPair('[')
-inoremap <expr> { fn.SmartPair('{')
-inoremap <expr> " fn.SmartPair('"')
-inoremap <expr> ' fn.SmartPair("'")
-inoremap <expr> ) fn.SmartPair(')')
-inoremap <expr> ] fn.SmartPair(']')
-inoremap <expr> } fn.SmartPair('}')
-inoremap <expr> <BS> fn.SmartBackspace()
 
 nnoremap <leader>sv :sp<CR>
 nnoremap <leader>sh :vsp<CR>
