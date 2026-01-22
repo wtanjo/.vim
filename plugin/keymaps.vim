@@ -2,9 +2,9 @@ vim9script
 
 g:mapleader = "\<space>"
 nnoremap <leader>c :
-# Builtin: <C-o> & <C-i> are undo and redo in terms of "large-scaled" cursor jumping(in the jump list).
+# In Vim, <C-o> & <C-i> are undo and redo in terms of "large-scaled" cursor jumping(in the jump list).
 # <C-o> for un-jump, and <C-i> for re-jump
-# Builtin: <C-[> == <ESC>
+# Same signal: <C-[> == <ESC>
 # CAUTION: <C-c> is INTERUPTION signal, and has some undesired side effect.
 # e.g. The LSP diagnoses won't be rendered with <C-c> to exit insert mode.
 # t: Terminal mode

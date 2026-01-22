@@ -5,9 +5,6 @@ set laststatus=2
 set showtabline=2
 set cmdheight=1
 set noshowmode
-if !has('gui_running')
-  set t_Co=256
-endif
 g:lightline = {
   'colorscheme': 'catppuccin_macchiato',
   'active': {

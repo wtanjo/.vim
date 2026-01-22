@@ -19,4 +19,5 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'lambdalisue/vim-fern-git-status'
 Plug 'jiangmiao/auto-pairs'
+Plug 'svermeulen/vim-yoink'
 call plug#end()
