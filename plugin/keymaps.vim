@@ -20,6 +20,10 @@ tnoremap <C-[> <C-\><C-n>
 # But let's add something to it.
 nnoremap <C-l> :nohlsearch<CR><C-l>
 inoremap <C-u> <C-g>u<C-u>
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
 nnoremap + $
 nnoremap - ^
 xnoremap + $
