@@ -22,9 +22,9 @@ def SetUpLsp()
         args: ['--background-index', '--clang-tidy']
     },
     {
-      name: 'pyright',
+      name: 'basedpyright',
       filetype: 'python',
-      path: 'pyright-langserver.cmd',
+      path: 'basedpyright-langserver.CMD',
       args: ['--stdio'],
       # rootSearch: ['.venv/', '.git/', 'pyproject.toml', 'pyrightconfig.json', 'requirements.txt'],
       workspaceConfig: {
